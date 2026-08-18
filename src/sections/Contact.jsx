@@ -91,7 +91,7 @@ export const Contact =()=>{
     return(
           <section
                id="contact"
-               className="min-h-screen py-20 lg:py-24 relative overflow-hidden"
+               className="min-h-screen py-15 lg:py-24 relative overflow-hidden"
                 >
             <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"/>
@@ -140,7 +140,11 @@ export const Contact =()=>{
                                         <input
                                         id="email"
                                         type="email"
+                                                                                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+
                                         required
+                                          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+
                                         placeholder="your@mail.com"
                                         value={formData.email}
                                         onChange={(e) =>
@@ -203,7 +207,7 @@ export const Contact =()=>{
                         
                                 </form>
                             </div>
-                            <div className="space-y-3">
+                            <div className="space-y-3 ">
                                 <div className="desighn rounded-3xl p-8">
                                     <h3 className="text-xl font-semibold">
                                         Contact Information
@@ -218,7 +222,7 @@ export const Contact =()=>{
                                              rel={item.label === "Location" ? "noopener noreferrer" : undefined}
                                              className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
                                                  >
-                                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group ">
+                                                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group  ">
                                                     <item.icon className="w-5 h-5 text-primary"/>
                                                 </div>
                                                 <div>

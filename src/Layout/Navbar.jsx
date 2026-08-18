@@ -60,7 +60,16 @@ useEffect(() =>{
         {/* button */}
 
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+<Button
+  size="sm"
+  onClick={() =>
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+>
+  Contact Me
+</Button>
         </div>
         {/* mobile menu button */}
         <button className="md:hidden p-2 text-foreground cursor-pointer"
