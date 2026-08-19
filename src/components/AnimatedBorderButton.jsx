@@ -32,12 +32,77 @@
 //     )
 // }
 
+// import { Button } from "@/components/Button";
+// import { Download } from "lucide-react";
+
+// export const AnimatedBorderButton = () => {
+//   return (
+//     <Button
+//       className="
+//         relative
+//         bg-transparent
+//         border border-border
+//         text-foreground
+//         hover:border-primary/50
+//         transition-all duration-1000
+//         group
+//         px-8 py-4
+//         text-lg font-medium
+//         rounded-full
+//         overflow-visible
+//       "
+//     >
+//       {/* Animated Border */}
+//       <svg
+//         className="absolute inset-0 w-full h-full pointer-events-none"
+//         viewBox="0 0 200 60"
+//         preserveAspectRatio="none"
+//         style={{ overflow: "visible" }}
+//       >
+//         <path
+//           d="M 30,1
+//              A 29,29 0 0 0 1,30
+//              L 1,30
+//              A 29,29 0 0 0 30,59
+//              L 200,59"
+//           fill="none"
+//           stroke="var(--color-primary)"
+//           strokeWidth="2"
+//           strokeDasharray="400 500"
+//           strokeDashoffset="400"
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           className="download-CV-path"
+//         />
+//       </svg>
+
+//       {/* Button Content */}
+//       <span className="relative z-10 flex items-center gap-2">
+//         <Download className="w-5 h-5" />
+//         Download CV
+//       </span>
+//     </Button>
+//   );
+// };
+
+
+
 import { Button } from "@/components/Button";
 import { Download } from "lucide-react";
 
 export const AnimatedBorderButton = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Projects/Resume.pdf";
+    link.download = "Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <Button
+      onClick={handleDownload}
       className="
         relative
         bg-transparent
@@ -60,10 +125,10 @@ export const AnimatedBorderButton = () => {
         style={{ overflow: "visible" }}
       >
         <path
-          d="M 30,1
-             A 29,29 0 0 0 1,30
-             L 1,30
-             A 29,29 0 0 0 30,59
+          d="M 30,1 
+             A 29,29 0 0 0 1,30 
+             L 1,30 
+             A 29,29 0 0 0 30,59 
              L 200,59"
           fill="none"
           stroke="var(--color-primary)"
