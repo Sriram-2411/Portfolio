@@ -22,7 +22,7 @@ const navlinks = [
 export const Footer =() =>{
     const currentYear = new Date().getFullYear();
     return(
-        <footer className="py-12 border-t border-border mx-50">
+        <footer className="py-12 border-t border-border mx-20">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                   {/* logo&copyrights   */}
