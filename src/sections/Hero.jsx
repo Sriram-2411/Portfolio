@@ -152,7 +152,7 @@ export const Hero = () => {
   </a>
 
   <a
-       href="https://www.linkedin.com/in/sriram-saba540247/"
+       href="https://www.linkedin.com/in/sriram-s-5a7934324/"
        target="_blank"
       rel="noopener noreferrer"
     className="w-10 h-10 rounded-full border border-border flex items-center justify-center
