@@ -1,11 +1,12 @@
-import { Code2,Lightbulb,Rocket,Users } from "lucide-react";
+import { Code2,Lightbulb,Rocket,Users,GraduationCap } from "lucide-react";
 
 const highlights = [
   {
-    icon: Code2,
-    title: "Clean Code",
-    description:
-      "Writing simple, organized, and readable code that is easy to understand and improve.",
+    icon: GraduationCap,
+    title: "Education",
+    
+        description: "Master of Computer Applications (MCA)",
+        details: "2024 • 83% Academic Score",
   },
   {
     icon: Rocket,
@@ -14,10 +15,10 @@ const highlights = [
       "Building responsive applications with a focus on speed, usability, and a smooth experience.",
   },
   {
-    icon: Users,
-    title: "Collaboration",
+    icon: Code2,
+    title: "Clean Code",
     description:
-      "Sharing ideas, learning from others, and working together to turn problems into solutions.",
+    "Writing simple, organized, and readable code that is easy to understand and improve.",
   },
   {
     icon: Lightbulb,
@@ -86,7 +87,14 @@ export const About =()=>{
                          <item.icon className="w-6 h-6 text-primary" />
                     </div>
                     <h3 className="text-lg font-semibold mb-2"> {item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+<p className="text-base text-muted-foreground font-medium mb-3">
+  {item.description}
+</p>
+
+{item.details && (
+  <p className="text-sm text-muted-foreground/70">
+    {item.details}
+  </p>)}
                     </div>
             ))}
         </div>
